@@ -21,7 +21,9 @@ def add_snippet_page(request):
     if request.method == "POST":  # хотим создать Сниппет(данные от формы)
         form = SnippetForm(request.POST)
         if form.is_valid():
-            form.save()
+            snippet = form.save(commit=False)
+            snippet.user = request.user
+            snippet.save()
             return redirect('snippets-list')
 
 
