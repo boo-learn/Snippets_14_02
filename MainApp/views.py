@@ -1,6 +1,7 @@
 from django.http import Http404, HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django.contrib import auth
+from django.contrib.auth.decorators import login_required
 from MainApp.models import Snippet
 from MainApp.forms import SnippetForm
 
@@ -10,6 +11,7 @@ def index_page(request):
     return render(request, 'pages/index.html', context)
 
 
+@login_required()
 def add_snippet_page(request):
     if request.method == "GET":  # хотим получить форму
         form = SnippetForm()
@@ -66,4 +68,4 @@ def login(request):
 
 def logout(request):
     auth.logout(request)
-    return redirect(request.META.get('HTTP_REFERER', '/'))
+    return redirect('home')
