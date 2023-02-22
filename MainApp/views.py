@@ -52,6 +52,7 @@ def snippet_detail(request, snippet_id):
     context = {
         'pagename': 'Просмотр сниппетов',
         'snippet': snippet,
+        # 'comments': snippet.comments.all(),
         'comment_form': comment_form
     }
     return render(request, 'pages/snippet-detail.html', context)
