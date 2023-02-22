@@ -38,7 +38,7 @@ def snippet_my(request):
 
 
 def snippets_page(request):
-    snippets = Snippet.objects.all()
+    snippets = Snippet.objects.all().order_by("-name")
     context = {
         'pagename': 'Просмотр сниппетов',
         'snippets': snippets
