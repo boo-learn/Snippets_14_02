@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect
 from django.contrib import auth
 from django.contrib.auth.decorators import login_required
 from MainApp.models import Snippet
-from MainApp.forms import SnippetForm, UserRegistrationForm
+from MainApp.forms import SnippetForm, UserRegistrationForm, CommentForm
 
 
 def index_page(request):
@@ -48,9 +48,11 @@ def snippets_page(request):
 
 def snippet_detail(request, snippet_id):
     snippet = Snippet.objects.get(id=snippet_id)
+    comment_form = CommentForm()
     context = {
         'pagename': 'Просмотр сниппетов',
-        'snippet': snippet
+        'snippet': snippet,
+        'comment_form': comment_form
     }
     return render(request, 'pages/snippet-detail.html', context)
 
@@ -87,6 +89,19 @@ def login(request):
             # Return error message
             pass
     return redirect('home')
+
+
+def comment_add(request):
+    if request.method == "POST":
+        comment_form = CommentForm(request.POST)
+        if comment_form.is_valid():
+            snippet_id = request.POST["snippet_id"]
+            snippet = Snippet.objects.get(id=snippet_id)
+            comment = comment_form.save(commit=False)
+            comment.author = request.user
+            comment.snippet = snippet
+            comment.save()
+            return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
 
 def logout(request):
