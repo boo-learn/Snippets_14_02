@@ -72,6 +72,8 @@ def create_user(request):
         if form.is_valid():
             form.save()
             return redirect('home')
+        context["form"] = form
+        return render(request, 'pages/registration.html', context)
 
 
 def login(request):
