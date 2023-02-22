@@ -39,7 +39,11 @@ def snippet_my(request):
 
 def snippets_page(request):
     snippets = Snippet.objects.all().order_by("-name")
+    lang = request.GET.get("lang")
+    if lang:
+        snippets = snippets.filter(lang=lang)
     context = {
+        'lang': lang,
         'pagename': 'Просмотр сниппетов',
         'snippets': snippets
     }
