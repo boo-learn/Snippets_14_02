@@ -18,6 +18,9 @@ class Snippet(models.Model):
     user = models.ForeignKey(to=User, on_delete=models.CASCADE,
                              blank=True, null=True)
 
+    def __str__(self):
+        return f"Snippet: {self.name}"
+
 
 class Comment(models.Model):
     text = models.TextField(max_length=1000)
