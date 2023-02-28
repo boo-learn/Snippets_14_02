@@ -42,7 +42,7 @@ def snippets_page(request):
     lang = request.GET.get("lang")
     sort = request.GET.get("sort")
     if lang:
-        snippets = snippets.filter(lang=lang)
+        snippets = snippets.filter(lang__short_name=lang)
     if sort:
         snippets = snippets.order_by(sort)
     context = {
