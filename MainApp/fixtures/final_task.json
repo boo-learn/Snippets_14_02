@@ -1,0 +1,167 @@
+[
+  {
+    "model": "MainApp.language",
+    "pk": 1,
+    "fields": {
+      "short_name": "py",
+      "full_name": "pyhon"
+    }
+  },
+  {
+    "model": "MainApp.language",
+    "pk": 2,
+    "fields": {
+      "short_name": "js",
+      "full_name": "JavaScript"
+    }
+  },
+  {
+    "model": "MainApp.snippet",
+    "pk": 15,
+    "fields": {
+      "name": "Admin's snippet-1",
+      "lang": 1,
+      "code": "print(\"Admin's snippet code\")",
+      "creation_date": "2023-03-01T15:29:09.356Z",
+      "user": 1
+    }
+  },
+  {
+    "model": "MainApp.snippet",
+    "pk": 16,
+    "fields": {
+      "name": "Admin's snippet-2",
+      "lang": 1,
+      "code": "print(\"Admin's snippet code\")",
+      "creation_date": "2023-03-01T15:29:19.957Z",
+      "user": 1
+    }
+  },
+  {
+    "model": "MainApp.snippet",
+    "pk": 17,
+    "fields": {
+      "name": "User's snippet-1",
+      "lang": 2,
+      "code": "code",
+      "creation_date": "2023-03-01T15:40:27.743Z",
+      "user": 2
+    }
+  },
+  {
+    "model": "MainApp.snippet",
+    "pk": 18,
+    "fields": {
+      "name": "User's snippet-2",
+      "lang": 2,
+      "code": "code",
+      "creation_date": "2023-03-01T15:40:51.602Z",
+      "user": 2
+    }
+  },
+  {
+    "model": "MainApp.snippet",
+    "pk": 19,
+    "fields": {
+      "name": "User's snippet-3",
+      "lang": 1,
+      "code": "code",
+      "creation_date": "2023-03-01T15:41:09.347Z",
+      "user": 2
+    }
+  },
+  {
+    "model": "MainApp.snippet",
+    "pk": 20,
+    "fields": {
+      "name": "User-2's snippet-1",
+      "lang": 1,
+      "code": "code",
+      "creation_date": "2023-03-01T15:41:59.172Z",
+      "user": 3
+    }
+  },
+  {
+    "model": "MainApp.snippet",
+    "pk": 21,
+    "fields": {
+      "name": "User-2's snippet-2",
+      "lang": 2,
+      "code": "code",
+      "creation_date": "2023-03-01T15:42:15.071Z",
+      "user": 3
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$RFrohJxQbzl03DWimdwXZZ$e3berMp3+ff6rp/mICtsWTTEsItj7S6L1/Qgxl4fLIk=",
+      "last_login": "2023-03-01T15:28:21.283Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "email": "admin@mail.ru",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-02-21T16:19:53.872Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$dCQl4yY59sctCNUOjlME3O$/DQxDRfq/WlJugOC9gRNmcUCR3ifKxmE2O0Q7Ssdn0Q=",
+      "last_login": "2023-03-01T15:40:16.747Z",
+      "is_superuser": false,
+      "username": "user1",
+      "first_name": "",
+      "last_name": "",
+      "email": "user1@mail.ru",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-02-22T14:27:00.789Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$Kg4RXxImPfZwpBipFkPOxK$olPwbTQSIx+BVZUmNzW8qtmn3k6QXrwDdb3NjVZpMgw=",
+      "last_login": "2023-03-01T15:41:42.690Z",
+      "is_superuser": false,
+      "username": "user2",
+      "first_name": "",
+      "last_name": "",
+      "email": "user2@mail.ru",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-02-22T15:32:51.939Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$kbtGWXmtxuSQpPhh73WjFk$K3itL8WtgTa/p4wbqwoMEN00lZHfu1v2a8B4CKEFLdc=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "user3",
+      "first_name": "",
+      "last_name": "",
+      "email": "user3@mail.ru",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-03-01T15:28:09.946Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]
